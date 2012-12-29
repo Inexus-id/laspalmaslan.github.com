@@ -943,9 +943,18 @@ html, body {
 
 /* line 21, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #B40001; }
+  /* line 24, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  a:hover {
+    color: #fff; }
 
-/* line 23, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+/* line 29, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+h2 {
+  color: #B40001;
+  border-bottom: 0.1em solid #B40001; }
+
+/* line 34, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
 .main-header {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bf2c29), color-stop(100%, #730912));
   background-image: -webkit-linear-gradient(#bf2c29, #730912);
@@ -962,10 +971,10 @@ a {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  /* line 32, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  /* line 43, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
   .main-header a {
     display: none; }
-  /* line 35, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  /* line 46, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
   .main-header h1 {
     text-indent: -100em;
     overflow: hidden;
@@ -975,7 +984,7 @@ a {
     margin: 0;
     height: 2em; }
 
-/* line 46, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+/* line 57, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
 .page-wrap {
   float: right;
   width: 80%;
@@ -986,7 +995,7 @@ a {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-/* line 54, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+/* line 65, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
 .main-nav {
   position: fixed;
   top: 0;
@@ -998,7 +1007,7 @@ a {
   -moz-transition: width 0.3s ease;
   -o-transition: width 0.3s ease;
   transition: width 0.3s ease; }
-  /* line 62, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  /* line 73, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
   .main-nav a {
     display: block;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3e3e3e), color-stop(100%, #383838));
@@ -1010,14 +1019,14 @@ a {
     border-bottom: 0.1em solid #2E2E2E;
     color: white;
     padding: 1.3em; }
-    /* line 69, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+    /* line 80, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
     .main-nav a:hover, .main-nav a:focus {
       background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #484848), color-stop(100%, #383838));
       background-image: -webkit-linear-gradient(#484848, #383838);
       background-image: -moz-linear-gradient(#484848, #383838);
       background-image: -o-linear-gradient(#484848, #383838);
       background-image: linear-gradient(#484848, #383838); }
-  /* line 73, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  /* line 84, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
   .main-nav:after {
     content: "";
     position: absolute;
@@ -1031,17 +1040,17 @@ a {
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
     background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)); }
 
-/* line 84, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+/* line 95, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
 .content {
   padding: 4em 2% 2% 2%;
   width: 96%; }
 
 @media only screen and (orientation: portrait) {
-  /* line 91, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  /* line 102, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
   body {
     font-size: 100%; }
 
-  /* line 93, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  /* line 104, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
   .main-header a {
     position: absolute;
     left: 0.5em;
@@ -1049,26 +1058,26 @@ a {
     font-size: 3em;
     display: block; }
 
-  /* line 100, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  /* line 111, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
   #main-nav {
     width: 0; }
-    /* line 102, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+    /* line 113, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
     #main-nav.big {
       width: 80%; }
 
-  /* line 106, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+  /* line 117, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
   .page-wrap {
     width: 100%;
     left: 0; }
-    /* line 109, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+    /* line 120, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
     .page-wrap .main-header {
       width: 100%;
       left: 0; }
-    /* line 113, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+    /* line 124, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
     .page-wrap.small {
       width: 100%;
       left: 80%; }
-      /* line 116, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
+      /* line 127, /home/groteck/projects/middleman/lpljs_code/source/stylesheets/all.scss */
       .page-wrap.small .main-header {
         width: 100%;
         left: 80%; } }
