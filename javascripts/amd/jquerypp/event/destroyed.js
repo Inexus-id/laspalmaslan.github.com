@@ -4,22 +4,4 @@
 * Copyright (c) 2012 Bitovi
 * Licensed MIT
 */
-
-define(['jquery'], function ($) {
-
-
-	// Store the old jQuery.cleanData
-	var oldClean = jQuery.cleanData;
-
-	// Overwrites cleanData which is called by jQuery on manipulation methods
-	$.cleanData = function (elems) {
-		for (var i = 0, elem;
-		(elem = elems[i]) !== undefined; i++) {
-			// Trigger the destroyed event
-			$(elem).triggerHandler("destroyed");
-		}
-		// Call the old jQuery.cleanData
-		oldClean(elems);
-	};
-	return $;
-});
+define(["jquery"],function(e){var t=jQuery.cleanData;return e.cleanData=function(n){for(var r=0,i;(i=n[r])!==undefined;r++)e(i).triggerHandler("destroyed");t(n)},e});

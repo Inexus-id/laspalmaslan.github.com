@@ -4,47 +4,4 @@
 * Copyright (c) 2012 Bitovi
 * Licensed MIT
 */
-
-define(['jquerypp/event/reverse'], function ($) {
-	var
-	// bind on the window window resizes to happen
-	win = $(window),
-		windowWidth = 0,
-		windowHeight = 0,
-		timer;
-
-	$(function () {
-		windowWidth = win.width();
-		windowHeight = win.height();
-	});
-
-	$.event.reverse('resize', {
-		handler: function (ev, data) {
-			var isWindow = this === window;
-
-			// if we are the window and a real resize has happened
-			// then we check if the dimensions actually changed
-			// if they did, we will wait a brief timeout and
-			// trigger resize on the window
-			// this is for IE, to prevent window resize 'infinate' loop issues
-			if (isWindow && ev.originalEvent) {
-				var width = win.width(),
-					height = win.height();
-
-				if ((width != windowWidth || height != windowHeight)) {
-					//update the new dimensions
-					windowWidth = width;
-					windowHeight = height;
-					clearTimeout(timer)
-					timer = setTimeout(function () {
-						win.trigger("resize");
-					}, 1);
-
-				}
-				return true;
-			}
-		}
-	});
-
-	return $;
-});
+define(["jquerypp/event/reverse"],function(e){var t=e(window),n=0,r=0,i;return e(function(){n=t.width(),r=t.height()}),e.event.reverse("resize",{handler:function(e,s){var o=this===window;if(o&&e.originalEvent){var u=t.width(),a=t.height();if(u!=n||a!=r)n=u,r=a,clearTimeout(i),i=setTimeout(function(){t.trigger("resize")},1);return!0}}}),e});
