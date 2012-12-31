@@ -1,0 +1,7 @@
+/*
+* jQuery++ - 1.0.0 (2012-11-23)
+* http://jquerypp.com
+* Copyright (c) 2012 Bitovi
+* Licensed MIT
+*/
+define(["jquery","jquerypp/event/livehack"],function(e){var t=/Phantom/.test(navigator.userAgent),n=!t&&"ontouchend"in document,r="touchmove scroll",i=n?"touchstart":"mousedown",s=n?"touchend":"mouseup",o=n?"touchmove":"mousemove",u=function(t){var n=t.originalEvent.touches?t.originalEvent.touches[0]:t;return{time:(new Date).getTime(),coords:[n.pageX,n.pageY],origin:e(t.target)}},a=e.event.swipe={delay:500,max:320,min:30};return e.event.setupHelper(["swipe","swipeleft","swiperight","swipeup","swipedown"],i,function(t){function c(e){if(!n)return;r=u(e),Math.abs(n.coords[0]-r.coords[0])>10&&e.preventDefault()}var n=u(t),r,i=t.delegateTarget||t.currentTarget,f=t.handleObj.selector,l=this;e(document.documentElement).bind(o,c).one(s,function(s){e(this).unbind(o,c);if(n&&r){var u=Math.abs(n.coords[0]-r.coords[0]),h=Math.abs(n.coords[1]-r.coords[1]),p=Math.sqrt(u*u+h*h);if(r.time-n.time<a.delay&&p>=a.min&&p<=a.max){var d=["swipe"];u>=a.min&&h<a.min?d.push(n.coords[0]>r.coords[0]?"swipeleft":"swiperight"):h>=a.min&&u<a.min&&d.push(n.coords[1]<r.coords[1]?"swipedown":"swipeup"),e.each(e.event.find(i,d,f),function(){this.call(l,t,{start:n,end:r})})}}n=r=undefined})}),e});

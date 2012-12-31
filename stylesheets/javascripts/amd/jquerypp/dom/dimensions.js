@@ -1,0 +1,7 @@
+/*
+* jQuery++ - 1.0.0 (2012-11-23)
+* http://jquerypp.com
+* Copyright (c) 2012 Bitovi
+* Licensed MIT
+*/
+define(["jquery","jquerypp/dom/styles"],function(e){var t=/button|select/i,n={},r={width:["Left","Right"],height:["Top","Bottom"],oldOuterHeight:e.fn.outerHeight,oldOuterWidth:e.fn.outerWidth,oldInnerWidth:e.fn.innerWidth,oldInnerHeight:e.fn.innerHeight},i=e.fn.jquery>="1.8.0";return e.each({width:"Width",height:"Height"},function(s,o){n[s]=function(n,i){var o=0;if(!t.test(n.nodeName)){var u=[];e.each(r[s],function(){var t=this;e.each(i,function(e,n){n&&u.push(e+t+(e=="border"?"Width":""))})}),e.each(e.styles(n,u),function(e,t){o+=parseFloat(t)||0})}return o},i||(e.fn["outer"+o]=function(e,t){var i=this[0];return typeof e=="number"?(i&&this[s](e-n[s](i,{padding:!0,border:!0,margin:t})),this):i?r["oldOuter"+o].apply(this,arguments):null},e.fn["inner"+o]=function(e){var t=this[0];return typeof e=="number"?(t&&this[s](e-n[s](t,{padding:!0})),this):t?r["oldInner"+o].apply(this,arguments):null});var u=function(t){return function(r){r[i?"pos":"state"]==0&&(r.start=e(r.elem)[s](),r.end=r.end-n[s](r.elem,t)),r.elem.style[s]=r.pos*(r.end-r.start)+r.start+"px"}};e.fx.step["outer"+o]=u({padding:!0,border:!0}),e.fx.step["outer"+o+"Margin"]=u({padding:!0,border:!0,margin:!0}),e.fx.step["inner"+o]=u({padding:!0})}),e});
